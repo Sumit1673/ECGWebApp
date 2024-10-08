@@ -26,5 +26,11 @@ def read_root():
 
 
 @app.post("/predict")
-def get_prediction(file: UploadFile = File(...)):
-    return predict()
+async def get_prediction(file: UploadFile = File(...)):
+    # Validate the file format
+    if file.content_type != "image/hdf5":
+        return {"error": "Invalid file format. Only HDF5 files are allowed."}
+
+    # Process the file as needed
+    prediction = await predict(file)  # Assuming prediction function is async
+    return prediction
