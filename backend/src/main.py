@@ -26,5 +26,5 @@ def read_root():
 
 
 @app.post("/predict")
-def prediction(file: UploadFile = File(...)):
+def get_prediction(file: UploadFile = File(...)):
     return predict()
