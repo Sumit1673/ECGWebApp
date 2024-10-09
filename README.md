@@ -1,6 +1,6 @@
 # **ECG2AF WebApp**
 
-Develop a web application that accurately predicts the **risk** of developing **atrial fibrillation (AF)** in individuals based on their **electrocardiogram (ECG) **data. The application will leverage a machine learning model trained on comprehensive ECG recordings and AF diagnosis datasets.
+Develop a web application that accurately predicts the **risk** of developing **atrial fibrillation (AF)** in individuals based on their **electrocardiogram (ECG)** data. The application will leverage a machine learning model trained on comprehensive ECG recordings and AF diagnosis datasets.
 
 This project performs the following tasks:
 
@@ -46,6 +46,9 @@ Changes will be made to the Arch 1 to deal with multiple users and batch data fo
 
 
 **Libraries and Tools:** Python, TF, numpy
+
 **Web FrameWork:** FastAPI
+
 **FrontEnd:** HTML
+
 **Containarization:** Docker and Docker-Compose
