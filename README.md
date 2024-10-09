@@ -56,3 +56,9 @@ Changes will be made to the Arch 1 to deal with multiple users and batch data fo
 **FrontEnd:** HTML
 
 **Containarization:** Docker and Docker-Compose
+
+# Initial Thoughts:
+I thought to create a devcontainer which will avoid using local machine and setting things up which can be hassle sometime.
+But after building the code when i tested it, it was found that codespace has issue with [ports] (https://notes.alexkehayias.com/codespaces-doesn-t-allow-requests-across-ports-from-a-preview/).
+
+So moved the project to local.
