@@ -12,11 +12,13 @@ This project performs the following tasks:
 ## Architecture Diagram 1
 The image shown below explains the architecture followed to build this project.
 
+![Basic Architecture](https://github.com/Sumit1673/ECGWebApp/blob/main/arch_images/arch1.png)
 
 
-Front end utilizes docker with nginx as the base request to forward the request to the backend to a port where fastapi is listening.
+Front end utilizes docker with nginx as the base to forward the request to the backend to a port where fastapi is listening. Server reads the request and forward it to specific function for further processing.
 
-The backend server and model are running on a docker that utilizes ***ML-Base*** as its base image. *ML-Base is custom-built to avoid pulling the model using git-lfs from the base repository. ML-Base is baked with model dependencies and model images to simplify things.*
+The backend server and model are running on a docker that utilizes ***ML-Base*** as its base image. *ML-Base is custom-built image that avoids pulling the model using git-lfs from the base repository and handles model dependencies.
+Model dependencies are taken from **ghcr.io/broadinstitute/ml4h:tf2.9-latest-cpu***. This image acts as base image for ML-Base. To further understand this have a look to the docker file inside [ml-base](https://github.com/Sumit1673/ECGWebApp/tree/main/ml-base)
 
 
 In a real-world scenario model is saved in cloud storage(like S3/GCS) for easy access of the model.
