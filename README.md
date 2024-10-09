@@ -25,14 +25,16 @@ In a real-world scenario model is saved in cloud storage(like S3/GCS) for easy a
 
 1. Install [docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/) on your local.
 
-1.   Clone the repo
-2.   run the command: docker compose build --no-cache; docker compose up; docker compose down
-3.   goto http://localhost:8080/
-4. Upload the image, enter your details (any random values). user details were added keeping in mind for future auditing and logging of the inputs.
-5. Submit
+1. Clone the repo
+2. cd ECGWebApp
+3. run the command: docker compose build --no-cache; docker compose up; docker compose down
+4. goto http://localhost:8080/
+5. Upload the image, enter your details (any random values). user details were added keeping in mind for future auditing and logging of the inputs.
+6. Submit
 
 ## Architecture Diagram 2 (Scalable to multiple workloads)
 
+![Scalable Architecture](https://github.com/Sumit1673/ECGWebApp/blob/main/arch_images/ECGWebAPP.jpg)
 
 Changes will be made to the Arch 1 to deal with multiple users and batch data for processing.
 
