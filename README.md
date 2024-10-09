@@ -36,7 +36,7 @@ In a real-world scenario model is saved in cloud storage(like S3/GCS) for easy a
 
 ## Architecture Diagram 2 (Scalable to multiple workloads)
 
-![Scalable Architecture](https://github.com/Sumit1673/ECGWebApp/blob/main/arch_images/ECGWebAPP.jpg)
+![Scalable Architecture](https://github.com/Sumit1673/ECGWebApp/blob/main/arch_images/ECGWebAPP.png)
 
 Changes will be made to the Arch 1 to deal with multiple users and batch data for processing.
 
