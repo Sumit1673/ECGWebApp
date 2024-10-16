@@ -1,0 +1,19 @@
+services:
+  ui:
+    image: nginx:latest
+    container_name: ui
+    ports:
+      - 8080:80
+    volumes:
+      - ./ui:/usr/share/nginx/html:ro
+#    network_mode: 'host'
+
+  backend:
+    image: backend
+    container_name: backend
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8081
+#    network_mode: 'host'

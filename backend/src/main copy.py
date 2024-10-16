@@ -5,7 +5,6 @@ from fastapi import UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from inference import predict
-import uvicorn
 
 logger = logging.getLogger('uvicorn.error')
 logger.setLevel(logging.DEBUG)
@@ -52,6 +51,3 @@ async def submit_data(user_data: UserData):
             "email": user_data.email
         }
     }
-
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8080)

@@ -1,0 +1,24 @@
+services:
+  ui:
+    # image: nginx:latest
+    build: ui
+    container_name: stui
+    ports: # HOST_PORT:CONTAINER_PORT
+      - 8051:8051
+    depends_on:
+      - backend
+    volumes:
+      - ./storage:/storage
+#    network_mode: 'host'
+
+  backend:
+    image: backend
+    container_name: backend2
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ./storage:/storage
+#    network_mode: 'host'
